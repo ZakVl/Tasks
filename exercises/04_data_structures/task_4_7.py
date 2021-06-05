@@ -16,3 +16,8 @@
 """
 
 mac = "AAAA:BBBB:CCCC"
+x=mac.replace(':','')
+z = str(bin(int(str(x), 16)))
+y = len(z)-2
+z = z[-y:]
+print(z)

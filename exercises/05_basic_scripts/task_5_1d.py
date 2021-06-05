@@ -43,3 +43,11 @@ london_co = {
         "routing": True,
     },
 }
+
+x=input('Введите имя устройства (r1, r2 или sw1):')
+for_y_perechen=', '.join(list(london_co [x]))
+str_for_y= 'Введите имя параметра ({}):'
+dict_for_y=london_co[x]
+y=input(str_for_y.format(for_y_perechen))
+y=y.lower()
+print(dict_for_y.get(y,'Такого значения нет'))
