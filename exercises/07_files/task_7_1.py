@@ -14,3 +14,6 @@ Outbound Interface    FastEthernet0/0
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+f = open('ospf.txt', 'r')
+for line in f:
+    print(line)
