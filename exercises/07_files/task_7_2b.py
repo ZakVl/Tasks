@@ -19,7 +19,8 @@
 
 ignore = ["duplex", "alias", "configuration"]
 cfg_lines_list = []
-x = input('Введите имя файла (config_sw1.txt): ')
+x = input('имя исходного файла конфигурации (config_sw1.txt): ')
+y = input('Вимя итогового файла конфигурации (Test1.txt, Test2.txt...): ')
 f = open(x)
 config=f.read().rstrip().split('\n')
 for line in config:
@@ -29,5 +30,8 @@ for line in config:
     if line[0] == '!':
         pass
     else:
-        for line in 
-        out = open('out_name', 'w')
+        cfg_lines_list.append(line +'\n')
+#print(cfg_lines_list)
+ff = open(y, 'w')
+ff.writelines(cfg_lines_list)
+ff.close()
