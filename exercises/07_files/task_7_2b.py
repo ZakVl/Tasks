@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 Задание 7.2b
@@ -17,3 +18,16 @@
 """
 
 ignore = ["duplex", "alias", "configuration"]
+cfg_lines_list = []
+x = input('Введите имя файла (config_sw1.txt): ')
+f = open(x)
+config=f.read().rstrip().split('\n')
+for line in config:
+    for x in ignore:
+        if line.count(x) != 0: 
+            line = '!' + line
+    if line[0] == '!':
+        pass
+    else:
+        for line in 
+        out = open('out_name', 'w')

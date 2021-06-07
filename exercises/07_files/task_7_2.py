@@ -39,3 +39,9 @@ interface Ethernet0/3
 ...
 
 """
+x = input('Введите имя файла (config_sw1.txt): ')
+f = open(x)
+config=f.read().rstrip().split('\n')
+for line in config:
+    if line[0] != '!':
+        print(line)
