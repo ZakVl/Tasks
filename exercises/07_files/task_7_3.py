@@ -20,3 +20,12 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+f = open('CAM_table.txt')
+list_lines = f.read().rstrip().split('\n')
+for line in list_lines:
+    x=line.split()
+    if len(x) < 4 or x[0].isdigit() == False:
+        pass
+    else:
+        print('{:8} {:19} {:8}'.format(x[0], x[1], x[3]))
+

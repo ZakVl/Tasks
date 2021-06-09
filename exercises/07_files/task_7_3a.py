@@ -23,3 +23,20 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+f = open('CAM_table.txt')
+list_lines = f.read().rstrip().split('\n')
+sort_list = []
+dict = {}
+for line in list_lines:
+    x=line.split()
+    if len(x) < 4 or x[0].isdigit() == False:
+        pass
+    else:
+         line_for_sort_list = ('{:<8} {:19} {}'.format(x[0], x[1], x[3])).split()
+         line_for_sort_list[0] = int(x[0])
+         sort_list = sort_list + [line_for_sort_list]
+sorted_list = sorted(sort_list)
+for z in sorted_list:
+    print('{:<8} {:19} {}'.format(z[0], z[1], z[2]))
+
+

@@ -18,8 +18,9 @@
 
 ignore = ["duplex", "alias", "configuration"]
 
-x = input('Введите имя файла (config_sw1.txt): ')
-f = open(x)
+#x = input('Введите имя файла (config_sw1.txt): ')
+#f = open(x)
+f = open('config_sw1.txt')
 config=f.read().rstrip().split('\n')
 for line in config:
     for x in ignore:
